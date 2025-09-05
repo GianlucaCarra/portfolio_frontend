@@ -22,7 +22,7 @@ export function AnimatedLogo() {
 	useEffect(() => {
 		const interval = setInterval(() => {
 		setShowCursor((prev) => !prev);
-		}, 600);
+		}, 500);
 		return () => clearInterval(interval);
 	}, []);
 
@@ -41,7 +41,7 @@ export function AnimatedLogo() {
 				{char}
 				</span>
 			))}
-			{showCursor && <span className="animate-pulse">_</span>}
+			{showCursor && <span className="">_</span>}
 		</h1>
 	);
 }
