@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { AOSProvider } from "@/components/AOSProvider/AOSProvider";
+import { AuthProvider } from "@/context/AuthContext";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -13,12 +14,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+		<AuthProvider>
+			    <html lang="en">
       <body>
-		<AOSProvider>
-        	{children}
-		</AOSProvider>
+				<AOSProvider>
+							{children}
+				</AOSProvider>
       </body>
     </html>
+		</AuthProvider>
   );
 }
