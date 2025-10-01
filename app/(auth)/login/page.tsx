@@ -16,7 +16,7 @@ export default function Login() {
 		login(email, secret);
 
 		if(!user) {
-			router.replace('/login');
+			return router.replace('/login');
 		}
 
 		router.replace('/dashboard');
