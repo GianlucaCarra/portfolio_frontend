@@ -1,6 +1,6 @@
 "use client"
 
-import { createContext, useEffect, useState, ReactNode } from "react";
+import { createContext, useState, ReactNode } from "react";
 import * as authService from '@/services/authService';
 
 interface AuthContextType {
