@@ -8,7 +8,9 @@ export function ProjectCard({ projectId, title, desc, tags }: { projectId: strin
 			<p className="text-sm text-font-secondary-light mb-4 h-20 overflow-hidden text-ellipsis line-clamp-4 w-full">{desc}</p>
 
 			<div className="flex flex-col justify-between items-center">
-				<span className="mb-1">{tags}</span>
+				<span className="mb-1">{
+				tags}
+				</span>
 				<LinkButton href={`/projects/${projectId}`} text="View Project" />
 			</div>
 		</div>

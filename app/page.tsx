@@ -1,10 +1,11 @@
 import { AnimatedLogo } from "@/components/UI/AnimatedLogo/AnimatedLogo";
-import { CiDark, CiLight } from "react-icons/ci";
+import { CiDark, CiLight, CiLink, CiLinkedin, CiMail } from "react-icons/ci";
 import { LinkButton } from "@/components/UI/LinkButton/LinkButton";
 import { InfiniteSlider } from "@/components/UI/InfiniteSlider/InfiniteSlider";
 import { ProjectSlider } from "@/components/UI/ProjectSlider/ProjectSlider";
 import { LinkButtonExternal } from "@/components/UI/LinkButtonExternal/LinkButtonExternal";
 import Image from "next/image";
+import { FaGithub, FaWhatsapp } from "react-icons/fa";
 
 export default function Home() {
 	return (
@@ -32,10 +33,10 @@ export default function Home() {
 			</div>
 
 			<main className="">
-				<section className="mb-4 px-7 bg-background-secondary-light py-4">
+				<section className="flex flex-col place-items-center justify-center mb-4 px-7 bg-background-secondary-light py-4">
 					<h3 className="text-[min(5vw,50px)] font-semi mb-4">About Me</h3>
 
-					<p>
+					<p className="">
 						Hey! Nice to meet you. I&#x2019;m Gianluca Carra, a full-stack developer with a passion for creating applications and softwares that are both efficient and user-friendly.
 						<br />
 						<br />
@@ -58,14 +59,16 @@ export default function Home() {
 					</div>
 				</section>
 
-				<section className="mb-6 px-7 ">
+				<section className="flex flex-col place-items-center justify-center mb-6 px-7">
 					<h3 className="text-[min(5vw,50px)] font-semi mb-4">Contact</h3>
 
-					<p className="mb-4">Fell free to get in touch, i&#x2019;ll make sure to answer ASAP!</p>
+					<p className="mb-6">Fell free to get in touch, i&#x2019;ll make sure to answer ASAP!</p>
 
-					<div>
-						<LinkButtonExternal href={"https://www.linkedin.com/in/gianlucacarra/"} text={"Linkedin"} icon={CiLight} />
-						<LinkButtonExternal href={"mailto:contact@giancarra.com"} text={"E-mail"} icon={CiDark} />
+					<div className="grid place-self-center justify-items-center grid-cols-1 sm:grid-cols-2 gap-4 max-w-180">
+						<LinkButtonExternal href={"https://www.linkedin.com/in/gianlucacarra/"} text={"Linkedin"} icon={CiLinkedin} />
+						<LinkButtonExternal href={"mailto:contact@giancarra.com"} text={"E-mail"} icon={CiMail} />
+						<LinkButtonExternal href={"https://wa.link/ukd2nz"} text={"WhatsApp"} icon={FaWhatsapp} />
+						<LinkButtonExternal href={"https://github.com/gianlucacarra"} text={"GitHub"} icon={FaGithub} />
 					</div>
 				</section>
 			</main>

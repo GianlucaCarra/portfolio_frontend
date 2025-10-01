@@ -1,9 +1,8 @@
 import Link from "next/link";
-import Image from "next/image";
 
 export function LinkButtonExternal({href, text, icon: Icon}: {href: string, text: string, icon?: React.ComponentType}) {
 	return (
-		<Link className="text-2 w-full text-center" href={href} target="_blank">
+		<Link className="flex items-center justify-center text-2 bg-foreground-light px-3.5 py-2.5 rounded-[5px] text-background-secondary-light w-80 text-center gap-2" href={href} target="_blank">
 			{ Icon && <Icon /> }
 
 			{text}
