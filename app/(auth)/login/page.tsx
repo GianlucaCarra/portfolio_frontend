@@ -3,7 +3,7 @@
 import { useAuth } from "@/hooks/useAuth";
 import React, { useState } from "react"
 
-export default function login() {
+export default function Login() {
 	const [email, setEmail] = useState<string>('');
 	const [secret, setSecret] = useState<string>('');
 	const { login } = useAuth();
