@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { AOSProvider } from "@/components/AOSProvider/AOSProvider";
 import { AuthProvider } from "@/context/AuthContext";
+import { ThemeProvider } from "@/context/ThemeContext";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -14,14 +15,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-		<AuthProvider>
-			    <html lang="en">
-      <body>
-				<AOSProvider>
-							{children}
-				</AOSProvider>
-      </body>
-    </html>
-		</AuthProvider>
+		<html lang="en" className="scroll-smooth light">
+					<body>
+						<AuthProvider>
+							<ThemeProvider>
+								<AOSProvider>
+									{children}
+								</AOSProvider>
+							</ThemeProvider>
+						</AuthProvider>
+					</body>
+    		</html>
   );
 }

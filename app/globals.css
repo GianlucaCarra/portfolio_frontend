@@ -2,25 +2,54 @@
 
 @theme inline {
 	--font-jetbrains-mono: 'JetBrains Mono', monospace;
+  --font-sans: 'Inter', sans-serif;
+  --font-heading: 'Poppins', sans-serif;
 
-	--animate-slide-left: slideLeft 90s linear infinite;
+	--animate-slider: slider 15s linear infinite;
 
-	--color-background-light: #F5F5F5;
-	--color-background-secondary-light: #FEFEFE;
-	--color-foreground-light: #0070F3;
-	--color-font-light: #1E1E1E;
-	--color-font-secondary-light: #555555;
+	--color-accent: #0070F3;
+  --color-background-primary: var(--background-primary);
+	--color-background-secondary: var(--background-secondary);
+  --color-font-primary: var(--color-font-primary);
+  --color-font-secondary: var(--color-font-secondary);
 
-	--color-background-dark: #E5E5E5;
-	--color-foreground-dark: #E5E5E5;
 
- 	@keyframes slideLeft {
-		0`% {
-			left: 100%;
-		}
-		100% {
-			left: -100%;
-		}
+ @keyframes slider {
+		from { transform: translateX(0); }
+		to { transform: translateX(-100%); }
+	}
+}
+
+html.light {
+  --background-primary: #F6F8FA;
+	--background-secondary: #FFFFFF;
+  --color-font-primary: #24292F;
+  --color-font-secondary: #57606A;
+}
+
+html.dark {
+	--background-primary: #0D1117;
+	--background-secondary: #161B22;
+  --color-font-primary: #C9D1D9;
+  --color-font-secondary: #8B949E;
+}
+
+
+@utility flex-center {
+	@apply flex justify-center items-center;
+}
+
+@utility flex-center-col {
+	@apply flex flex-col justify-center items-center;
+}
+
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading text-font-primary text-[min(20px,24px)];
+  }
+
+	span, p, button {
+		@apply font-sans text-font-secondary  text-[min(12px,24px)];
 	}
 }
 
@@ -31,10 +60,4 @@
 .scrollbar-hidden {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;     /* Firefox */
-}
-
-body {
-	background: var(--color-background-light);
-	color: var(--color-font-light);
-	font-family: var(--font-jetbrains-mono), monospace;
 }

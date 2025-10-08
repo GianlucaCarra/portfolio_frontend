@@ -27,21 +27,21 @@ export function AnimatedLogo() {
 	}, []);
 
 	return (
-		<h1 className="text-[min(8vw,70px)] font-bold mb-2">
+		<h1 className="font-jetbrains-mono text-[min(26px,70px)] text-font-primary font-bold">
 			{logoString
 			.split("")
 			.slice(0, stringIndex)
 			.map((char, index) => (
 				<span
 				key={index}
-				className={`transition-opacity duration-300 ease-in-out ${
+				className={`transition-opacity duration-300 ease-in-out font-jetbrains-mono text-font-primary text-[min(26px,70px)] ${
 					index <= stringIndex ? "opacity-100" : "opacity-0"
 				}`}
 				>
 				{char}
 				</span>
 			))}
-			{showCursor && <span className="">_</span>}
+			{showCursor && <span className="font-jetbrains-mono text-font-primary text-[min(26px,70px)]">_</span>}
 		</h1>
 	);
 }
