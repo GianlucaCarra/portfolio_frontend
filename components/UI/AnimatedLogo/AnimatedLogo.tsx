@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useEffect, useState } from "react";
 
@@ -17,31 +17,33 @@ export function AnimatedLogo() {
 
 			return () => clearTimeout(timeout);
 		}
-  	}, [stringIndex, logoString.length]);
+	}, [stringIndex, logoString.length]);
 
 	useEffect(() => {
 		const interval = setInterval(() => {
-		setShowCursor((prev) => !prev);
+			setShowCursor((prev) => !prev);
 		}, 500);
 		return () => clearInterval(interval);
 	}, []);
 
 	return (
-		<h1 className="font-jetbrains-mono text-[min(26px,70px)] text-font-primary font-bold">
+		<h1 className="font-jetbrains-mono text-font-primary text-[min(26px,70px)] font-bold">
 			{logoString
-			.split("")
-			.slice(0, stringIndex)
-			.map((char, index) => (
-				<span
-				key={index}
-				className={`transition-opacity duration-300 ease-in-out font-jetbrains-mono text-font-primary text-[min(26px,70px)] ${
-					index <= stringIndex ? "opacity-100" : "opacity-0"
-				}`}
-				>
-				{char}
-				</span>
-			))}
-			{showCursor && <span className="font-jetbrains-mono text-font-primary text-[min(26px,70px)]">_</span>}
+				.split("")
+				.slice(0, stringIndex)
+				.map((char, index) => (
+					<span
+						key={index}
+						className={`font-jetbrains-mono text-font-primary text-[min(26px,70px)] transition-opacity duration-300 ease-in-out ${
+							index <= stringIndex ? "opacity-100" : "opacity-0"
+						}`}
+					>
+						{char}
+					</span>
+				))}
+			{showCursor && (
+				<span className="font-jetbrains-mono text-font-primary text-[min(26px,70px)]">_</span>
+			)}
 		</h1>
 	);
 }

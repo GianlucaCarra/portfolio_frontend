@@ -1,8 +1,19 @@
 import Link from "next/link";
 
-export function LinkButton({ href, text, variant }: { href: string, text: string, variant?: 'black' | 'blue' }) {
+export function LinkButton({
+	href,
+	text,
+	variant,
+}: {
+	href: string;
+	text: string;
+	variant?: "black" | "blue";
+}) {
 	return (
-		<Link className={`text-white ${variant === 'blue' || !variant ? 'bg-accent' : 'bg-font-primary'} py-2 px-6 rounded-[5px] text-[11px] font-medium max-w-[80%] w-full text-center`} href={href}>
+		<Link
+			className={`text-white ${variant === "blue" || !variant ? "bg-accent" : "bg-font-primary"} w-full max-w-[80%] rounded-[5px] px-6 py-2 text-center text-[11px] font-medium`}
+			href={href}
+		>
 			{text}
 		</Link>
 	);

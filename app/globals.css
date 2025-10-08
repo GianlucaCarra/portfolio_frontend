@@ -1,63 +1,82 @@
 @import "tailwindcss";
 
 @theme inline {
-	--font-jetbrains-mono: 'JetBrains Mono', monospace;
-  --font-sans: 'Inter', sans-serif;
-  --font-heading: 'Poppins', sans-serif;
+	--font-jetbrains-mono: "JetBrains Mono", monospace;
+	--font-sans: "Inter", sans-serif;
+	--font-heading: "Poppins", sans-serif;
 
 	--animate-slider: slider 15s linear infinite;
 
-	--color-accent: #0070F3;
-  --color-background-primary: var(--background-primary);
+	--color-accent: #0070f3;
+	--color-background-primary: var(--background-primary);
 	--color-background-secondary: var(--background-secondary);
-  --color-font-primary: var(--color-font-primary);
-  --color-font-secondary: var(--color-font-secondary);
+	--color-font-primary: var(--color-font-primary);
+	--color-font-secondary: var(--color-font-secondary);
 
-
- @keyframes slider {
-		from { transform: translateX(0); }
-		to { transform: translateX(-100%); }
+	@keyframes slider {
+		from {
+			transform: translateX(0);
+		}
+		to {
+			transform: translateX(-100%);
+		}
 	}
 }
 
 html.light {
-  --background-primary: #F6F8FA;
-	--background-secondary: #FFFFFF;
-  --color-font-primary: #24292F;
-  --color-font-secondary: #57606A;
+	background-color: var(--background-primary);
+	--background-primary: #f6f8fa;
+	--background-secondary: #ffffff;
+	--color-font-primary: #24292f;
+	--color-font-secondary: #57606a;
 }
 
 html.dark {
-	--background-primary: #0D1117;
-	--background-secondary: #161B22;
-  --color-font-primary: #C9D1D9;
-  --color-font-secondary: #8B949E;
+	background-color: var(--background-primary);
+	--background-primary: #0d1117;
+	--background-secondary: #161b22;
+	--color-font-primary: #c9d1d9;
+	--color-font-secondary: #8b949e;
 }
 
+* {
+	transition:
+		background-color 0.4s ease,
+		color 0.4s ease,
+		border-color 0.4s ease,
+		button 10s ease;
+}
 
 @utility flex-center {
-	@apply flex justify-center items-center;
+	@apply flex items-center justify-center;
 }
 
 @utility flex-center-col {
-	@apply flex flex-col justify-center items-center;
+	@apply flex flex-col items-center justify-center;
 }
 
 @layer base {
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-heading text-font-primary text-[min(20px,24px)];
-  }
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		@apply font-heading text-font-primary text-[min(20px,24px)];
+	}
 
-	span, p, button {
-		@apply font-sans text-font-secondary  text-[min(12px,24px)];
+	span,
+	p,
+	button {
+		@apply text-font-secondary font-sans text-[min(12px,24px)];
 	}
 }
 
 .scrollbar-hidden::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Edge */
+	display: none; /* Chrome, Safari, Edge */
 }
 
 .scrollbar-hidden {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;     /* Firefox */
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
 }

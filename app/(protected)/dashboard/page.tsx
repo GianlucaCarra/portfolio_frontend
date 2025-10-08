@@ -1,7 +1,3 @@
 export default function Dashboard() {
-	return (
-		<div>
-			protected route
-		</div>
-	)
+	return <div>protected route</div>;
 }
