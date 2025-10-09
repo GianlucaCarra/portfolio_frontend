@@ -13,7 +13,7 @@ export function ProjectCard({
 	title: string;
 	image: string;
 	desc: string;
-	tags: any[];
+	tags: { id: number; name: string; }[];
 }) {
 	return (
 		<div className="bg-background-secondary flex w-[140px] min-w-[140px] flex-col gap-[6px] rounded-[5px] p-[10px]">

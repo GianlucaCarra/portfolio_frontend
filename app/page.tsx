@@ -1,7 +1,3 @@
-import { AnimatedLogo } from "@/components/UI/AnimatedLogo/AnimatedLogo";
-import { CiDark, CiLight, CiLink, CiLinkedin, CiMail } from "react-icons/ci";
-import Image from "next/image";
-import { FaGithub, FaWhatsapp } from "react-icons/fa";
 import { ToggleTheme } from "@/components/UI/ToggleTheme/ToggleTheme";
 import { Header } from "@/components/Sections/Header";
 import { Hero } from "@/components/Sections/Hero";
