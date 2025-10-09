@@ -1,6 +1,7 @@
+import { Project } from "@/types/project.interface";
 import { ProjectCard } from "../ProjectCard/ProjectCard";
 
-export function ProjectCarousel({ data }: { data: any[] }) {
+export function ProjectCarousel({ data }: { data: Project[] }) {
 	console.log(data[0]);
 
 	return (
