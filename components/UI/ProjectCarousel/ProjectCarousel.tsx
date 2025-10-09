@@ -12,7 +12,7 @@ export function ProjectCarousel({ data }: { data: Project[] }) {
 					key={project.id}
 					projectId={project.id}
 					title={project.name}
-					image={project.images[0].imageUrl}
+					image={project.images[0].imageUrl ?? "/fallback.png"}
 					desc={project.description}
 					tags={project.tags}
 				/>
