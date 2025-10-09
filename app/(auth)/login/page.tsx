@@ -4,7 +4,7 @@ import { useAuth } from "@/hooks/useAuth";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 
-export function Login() {
+export default function Login() {
 	const [email, setEmail] = useState<string>("");
 	const [secret, setSecret] = useState<string>("");
 	const { login, user } = useAuth();

@@ -2,7 +2,7 @@ import { AnimatedLogo } from "../UI/AnimatedLogo/AnimatedLogo";
 
 export function Header() {
 	return (
-		<header className="flex">
+		<header className="flex" id="header">
 			<div className="flex flex-col">
 				<AnimatedLogo />
 

@@ -1,28 +1,43 @@
-import { LinkButton } from "../LinkButton/LinkButton";
+import Image from "next/image";
+import { ProjectTag } from "../ProjectTag/ProjectTag";
+import Link from "next/link";
 
 export function ProjectCard({
 	projectId,
 	title,
+	image,
 	desc,
 	tags,
 }: {
 	projectId: string;
 	title: string;
+	image: string;
 	desc: string;
-	tags: string[];
+	tags: any[];
 }) {
 	return (
-		<div className="bg-background-secondary-light flex w-50 flex-col rounded-md p-3">
-			<h4 className="mb-2 w-full truncate text-lg font-semibold">{title}</h4>
+		<div className="bg-background-secondary flex w-[140px] min-w-[140px] flex-col gap-[6px] rounded-[5px] p-[10px]">
+			<Image
+				width={100}
+				height={100}
+				src={image}
+				alt={`${title} project thumbnail`}
+				className="h-[65px] max-h-[65px] w-full rounded-[2px] object-cover"
+			/>
 
-			<p className="text-font-secondary-light mb-4 line-clamp-4 h-20 w-full overflow-hidden text-sm text-ellipsis">
-				{desc}
-			</p>
+			<h4 className="w-full truncate text-[12px] font-medium">{title}</h4>
 
-			<div className="flex flex-col items-center justify-between">
-				<span className="mb-1">{tags}</span>
-				<LinkButton href={`/projects/${projectId}`} text="View Project" />
+			<span className="line-clamp-4 w-full overflow-hidden text-[9px] text-ellipsis">{desc}</span>
+
+			<div className="scrollbar-hidden flex gap-1 overflow-x-auto">
+				{tags.map((tag) => (
+					<ProjectTag key={tag.id} name={tag.name} />
+				))}
 			</div>
+
+			<Link href={`/projects/${projectId}`} className="text-accent text-[9px]">
+				See more
+			</Link>
 		</div>
 	);
 }

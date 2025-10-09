@@ -1,7 +1,9 @@
+import { SectionTitle } from "../UI/SectionTitle/SectionTitle";
+
 export function AboutMe() {
 	return (
 		<section className="flex flex-col gap-3" id="about-me">
-			<h3 className="text-[20px] font-semibold">About Me</h3>
+			<SectionTitle text="About Me" />
 
 			<p>
 				Hey! Nice to meet you. I’m Gianluca Carra, a full-stack developer with a passion for

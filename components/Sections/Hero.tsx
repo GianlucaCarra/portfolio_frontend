@@ -4,7 +4,7 @@ import { LinkButton } from "../UI/LinkButton/LinkButton";
 
 export function Hero() {
 	return (
-		<section className="flex w-full items-end">
+		<section className="flex w-full items-end" id="hero">
 			<div className="flex flex-col gap-3">
 				<h2 className="text-[min(24px,70px)] font-semibold">Hello there 👋!</h2>
 

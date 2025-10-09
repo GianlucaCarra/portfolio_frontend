@@ -1,6 +1,5 @@
 "use client";
 import { useTheme } from "@/hooks/useTheme";
-import { useEffect, useState } from "react";
 import { CiDark, CiLight } from "react-icons/ci";
 
 export function ToggleTheme() {
@@ -9,16 +8,18 @@ export function ToggleTheme() {
 	return (
 		<button
 			onClick={toggle}
-			className="bg-background-secondary top-[10px] right-[10px] flex items-center justify-center rounded-full p-1 shadow-md"
+			className="bg-background-secondary fixed top-[10px] right-[10px] flex items-center justify-center rounded-full"
 		>
-			<CiDark
-				size={35}
-				className={`transition-opacity duration-500 ${theme === "light" ? "opacity-100" : "opacity-0"}`}
-			/>
-			<CiLight
-				size={35}
-				className={`transition-opacity duration-500 ${theme === "dark" ? "opacity-100" : "opacity-0"}`}
-			/>
+			<div className="relative flex h-10 w-10 items-center justify-center">
+				<CiDark
+					size={30}
+					className={`absolute transition-opacity duration-500 ${theme === "light" ? "opacity-100" : "opacity-0"}`}
+				/>
+				<CiLight
+					size={30}
+					className={`absolute transition-opacity duration-500 ${theme === "dark" ? "opacity-100" : "opacity-0"}`}
+				/>
+			</div>
 		</button>
 	);
 }

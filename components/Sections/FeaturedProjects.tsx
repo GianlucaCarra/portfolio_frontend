@@ -1,6 +1,15 @@
-import { SkillCarousel } from "../UI/SkillCarousel.tsx/SkillCarousel";
-import { SkillPoint } from "../UI/SkillPoint/SkillPoint";
+import { getProjects } from "@/services/projectServices";
+import { SectionTitle } from "../UI/SectionTitle/SectionTitle";
+import { ProjectCarousel } from "../UI/ProjectCarousel/ProjectCarousel";
 
-export function FeaturedProjects() {
-	return <section className="flex flex-col gap-3" id="about-me"></section>;
+export async function FeaturedProjects() {
+	const { data } = await getProjects();
+
+	return (
+		<section className="flex flex-col gap-3" id="featured">
+			<SectionTitle text="Featured Projects" />
+
+			<ProjectCarousel data={data} />
+		</section>
+	);
 }
