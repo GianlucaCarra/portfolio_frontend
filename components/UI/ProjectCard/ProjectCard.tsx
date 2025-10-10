@@ -13,29 +13,29 @@ export function ProjectCard({
 	title: string;
 	image: string;
 	desc: string;
-	tags: { id: string; name: string; }[];
+	tags: { id: string; name: string }[];
 }) {
 	return (
-		<div className="bg-background-secondary flex w-[140px] min-w-[140px] flex-col gap-[6px] rounded-[5px] p-[10px]">
+		<div className="bg-background-secondary flex min-w-[280px] flex-col gap-3 rounded-[5px] p-3 shadow-md">
 			<Image
-				width={100}
-				height={100}
+				width={1920}
+				height={1080}
 				src={image}
 				alt={`${title} project thumbnail`}
-				className="h-[65px] max-h-[65px] w-full rounded-[2px] object-cover"
+				className="h-[150px] w-full rounded-[2px] object-cover object-top-left"
 			/>
 
-			<h4 className="w-full truncate text-[12px] font-medium">{title}</h4>
+			<h4 className="w-full truncate text-base font-medium">{title}</h4>
 
-			<span className="line-clamp-4 w-full overflow-hidden text-[9px] text-ellipsis">{desc}</span>
+			<span className="line-clamp-4 w-full overflow-hidden text-sm text-ellipsis">{desc}</span>
 
-			<div className="scrollbar-hidden flex gap-1 overflow-x-auto">
+			<div className="scrollbar-hidden flex gap-1 overflow-x-auto mask-r-from-97% mask-l-from-97% px-1">
 				{tags.map((tag) => (
 					<ProjectTag key={tag.id} name={tag.name} />
 				))}
 			</div>
 
-			<Link href={`/projects/${projectId}`} className="text-accent text-[9px]">
+			<Link href={`/projects/${projectId}`} className="text-accent text-sm">
 				See more
 			</Link>
 		</div>

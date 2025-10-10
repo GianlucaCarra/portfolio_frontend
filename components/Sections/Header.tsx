@@ -6,9 +6,7 @@ export function Header() {
 			<div className="flex flex-col">
 				<AnimatedLogo />
 
-				<h2 className="text-font-secondary text-[min(14px,70px)] font-light">
-					Full-stack Developer
-				</h2>
+				<h2 className="text-font-secondary text-lg font-light">Full-stack Developer</h2>
 			</div>
 
 			{/*

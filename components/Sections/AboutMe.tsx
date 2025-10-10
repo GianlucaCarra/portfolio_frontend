@@ -5,7 +5,7 @@ export function AboutMe() {
 		<section className="flex flex-col gap-3" id="about-me">
 			<SectionTitle text="About Me" />
 
-			<p>
+			<p className="text-base">
 				Hey! Nice to meet you. I’m Gianluca Carra, a full-stack developer with a passion for
 				creating applications and softwares that are both efficient and user-friendly.
 				<br />

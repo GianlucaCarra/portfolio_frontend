@@ -5,10 +5,8 @@ import { ProjectCarousel } from "../UI/ProjectCarousel/ProjectCarousel";
 export async function FeaturedProjects() {
 	const { data } = await getProjects();
 
-	if (!data || data.length === 0) return null;
-
 	return (
-		<section className="flex flex-col gap-3" id="featured">
+		<section className="flex flex-col gap-3 overflow-y-visible" id="featured">
 			<SectionTitle text="Featured Projects" />
 
 			<ProjectCarousel data={data} />

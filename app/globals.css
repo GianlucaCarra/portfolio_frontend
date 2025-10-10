@@ -6,6 +6,7 @@
 	--font-heading: "Poppins", sans-serif;
 
 	--animate-slider: slider 15s linear infinite;
+	--animate-slider-reverse: slider 15s linear infinite reverse;
 
 	--color-accent: #0070f3;
 	--color-background-primary: var(--background-primary);
@@ -39,12 +40,16 @@ html.dark {
 	--color-font-secondary: #8b949e;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 * {
 	transition:
 		background-color 0.4s ease,
 		color 0.4s ease,
 		border-color 0.4s ease,
-		button 10s ease;
+		button 0.4s ease;
 }
 
 @utility flex-center {
@@ -63,13 +68,13 @@ html.dark {
 	h5,
 	h6,
 	a {
-		@apply font-heading text-font-primary text-[min(20px,24px)];
+		@apply font-heading text-font-primary;
 	}
 
 	span,
 	p,
 	button {
-		@apply text-font-secondary font-sans text-[min(12px,24px)];
+		@apply text-font-secondary font-sans;
 	}
 }
 

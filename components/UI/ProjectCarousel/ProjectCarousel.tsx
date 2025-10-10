@@ -2,10 +2,8 @@ import { Project } from "@/types/project.interface";
 import { ProjectCard } from "../ProjectCard/ProjectCard";
 
 export function ProjectCarousel({ data }: { data: Project[] }) {
-	if(!data) return null;
-
 	return (
-		<div className="scrollbar-hidden flex gap-2 overflow-x-auto">
+		<div className="scrollbar-hidden flex gap-3 overflow-x-auto overflow-y-visible mask-r-from-97% mask-l-from-97% px-1.5 pb-2">
 			{data.map((project) => (
 				<ProjectCard
 					key={project.id}
