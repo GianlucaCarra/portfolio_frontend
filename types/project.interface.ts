@@ -5,4 +5,7 @@ export interface Project {
 	description: string;
 	images: { id: string; imageUrl: string }[];
 	tags: { id: string; name: string }[];
+	frontendUrl?: string;
+	backendUrl?: string;
+	liveUrl?: string;
 }
