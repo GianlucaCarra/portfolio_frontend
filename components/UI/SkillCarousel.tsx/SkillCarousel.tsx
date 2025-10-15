@@ -5,7 +5,7 @@ export function SkillCarousel({ reverse, data }: { reverse?: boolean; data: Skil
 	return (
 		<div className="scrollbar-hidden left-0 flex w-full flex-nowrap overflow-x-hidden mask-r-from-95% mask-l-from-95%">
 			<div
-				className={`flex-center ${reverse ? "animate-slider-reverse" : "animate-slider"} gap-3 pr-3`}
+				className={`flex-center min-w-max ${reverse ? "animate-slider-reverse" : "animate-slider"} gap-3 pr-3`}
 			>
 				{data.map((skill, index) => (
 					<Image
@@ -21,7 +21,7 @@ export function SkillCarousel({ reverse, data }: { reverse?: boolean; data: Skil
 
 			<div
 				aria-hidden
-				className={`flex-center ${reverse ? "animate-slider-reverse" : "animate-slider"} gap-3 pr-3`}
+				className={`flex-center min-w-max ${reverse ? "animate-slider-reverse" : "animate-slider"} gap-3 pr-3`}
 			>
 				{data.map((skill, index) => (
 					<Image
