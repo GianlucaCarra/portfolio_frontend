@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export function SkillCarousel({ reverse, data }: { reverse?: boolean; data: Skill[] }) {
 	return (
-		<div className="scrollbar-hidden left-0 flex w-full overflow-x-hidden mask-r-from-95% mask-l-from-95%">
+		<div className="scrollbar-hidden left-0 flex w-full flex-nowrap overflow-x-hidden mask-r-from-95% mask-l-from-95%">
 			<div
 				className={`flex-center ${reverse ? "animate-slider-reverse" : "animate-slider"} gap-3 pr-3`}
 			>
