@@ -1,7 +1,6 @@
 "use client";
 import { useTheme } from "@/hooks/useTheme";
-import { MdLightMode, MdDarkMode } from "react-icons/md";
-import { CiDark, CiLight } from "react-icons/ci";
+import { MdOutlineLightMode, MdOutlineDarkMode } from "react-icons/md";
 
 export function ToggleTheme() {
 	const { toggle, theme } = useTheme();
@@ -9,14 +8,14 @@ export function ToggleTheme() {
 	return (
 		<button
 			onClick={toggle}
-			className="bg-background-secondary fixed top-[20px] right-[20px] z-10 flex items-center justify-center rounded-full shadow-md"
+			className="fixed top-[20px] right-[20px] z-10 flex items-center justify-center hover:cursor-pointer lg:top-[10px] lg:right-[10px]"
 		>
 			<div className="relative flex h-12 w-12 items-center justify-center">
-				<MdDarkMode
+				<MdOutlineDarkMode
 					size={30}
 					className={`absolute transition-opacity duration-500 ${theme === "light" ? "opacity-100" : "opacity-0"}`}
 				/>
-				<MdLightMode
+				<MdOutlineLightMode
 					size={30}
 					className={`absolute transition-opacity duration-500 ${theme === "dark" || !theme ? "opacity-100" : "opacity-0"}`}
 				/>

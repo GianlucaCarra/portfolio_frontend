@@ -34,14 +34,16 @@ export function AnimatedLogo() {
 				.map((char, index) => (
 					<span
 						key={index}
-						className={`font-jetbrains-mono text-font-primary text-3xl transition-opacity duration-300 ease-in-out ${
+						className={`font-jetbrains-mono text-font-primary text-3xl transition-opacity duration-300 ease-in-out lg:text-4xl ${
 							index <= stringIndex ? "opacity-100" : "opacity-0"
 						}`}
 					>
 						{char}
 					</span>
 				))}
-			{showCursor && <span className="font-jetbrains-mono text-font-primary text-3xl">_</span>}
+			{showCursor && (
+				<span className="font-jetbrains-mono text-font-primary text-3xl lg:text-4xl">_</span>
+			)}
 		</h1>
 	);
 }

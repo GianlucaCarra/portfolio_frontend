@@ -15,8 +15,8 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="en" className="dark">
-			<body>
+		<html lang="en" className="dark scrollbar-hidden">
+			<body className="scrollbar-hidden">
 				<AuthProvider>
 					<ThemeProvider>
 						<AOSProvider>{children}</AOSProvider>

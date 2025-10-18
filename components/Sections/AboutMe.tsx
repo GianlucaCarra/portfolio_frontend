@@ -2,7 +2,7 @@ import { SectionTitle } from "../UI/SectionTitle/SectionTitle";
 
 export function AboutMe() {
 	return (
-		<section className="flex flex-col gap-3" id="about-me">
+		<section className="flex flex-col gap-3 lg:gap-4" id="about-me">
 			<SectionTitle text="About Me" />
 
 			<p className="text-base">

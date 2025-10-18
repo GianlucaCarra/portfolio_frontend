@@ -11,7 +11,7 @@ export function LinkButton({
 }) {
 	return (
 		<Link
-			className={`text-white ${variant === "blue" || !variant ? "bg-accent" : "bg-[#161B22]"} w-full max-w-[80%] rounded-[5px] px-6 py-2 text-center text-sm font-medium`}
+			className={`text-white ${variant === "blue" || !variant ? "bg-accent" : "bg-[#161B22]"} w-full max-w-[80%] rounded-[5px] px-6 py-2 text-center text-sm font-medium transition-opacity duration-200 ease-in-out hover:opacity-80 lg:px-8 lg:py-3 lg:text-base`}
 			href={href}
 		>
 			{text}

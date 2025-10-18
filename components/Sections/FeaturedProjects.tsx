@@ -6,7 +6,7 @@ export async function FeaturedProjects() {
 	const { data } = await getProjects();
 
 	return (
-		<section className="flex flex-col gap-3 overflow-y-visible" id="featured">
+		<section className="flex flex-col gap-3 overflow-y-visible lg:gap-4" id="featured">
 			<SectionTitle text="Featured Projects" />
 
 			<ProjectCarousel data={data} />
