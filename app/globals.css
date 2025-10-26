@@ -5,8 +5,8 @@
 	--font-sans: "Inter", sans-serif;
 	--font-heading: "Poppins", sans-serif;
 
-	--animate-slider: slider 15s linear infinite;
-	--animate-slider-reverse: slider 15s linear infinite reverse;
+	--animate-slider: slider 20s linear infinite;
+	--animate-slider-reverse: slider 20s linear infinite reverse;
 
 	--color-accent: #0070f3;
 	--color-background-primary: var(--background-primary);
@@ -87,7 +87,11 @@ body {
 	display: none; /* Chrome, Safari, Edge */
 }
 
-.scrollbar-hidden {
+*::-webkit-scrollbar {
+	display: none; /* Chrome, Safari, Edge */
+}
+
+* {
 	-ms-overflow-style: none; /* IE and Edge */
 	scrollbar-width: none; /* Firefox */
 }

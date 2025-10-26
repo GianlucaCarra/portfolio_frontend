@@ -92,7 +92,9 @@ export function LongParagraph({ paragraphs }: { paragraphs: string[] }) {
 							}
 						}}
 						className={`h-2 w-2 rounded-full transition-all ${
-							idx === activeIndex ? "bg-accent w-6" : "bg-font-secondary hover:scale-110"
+							idx === activeIndex
+								? "bg-accent w-6"
+								: "bg-font-secondary hover:scale-140 hover:cursor-pointer"
 						}`}
 						aria-label={`Go to paragraph ${idx + 1}`}
 					/>

@@ -4,7 +4,7 @@ import { Skills } from "./Skills";
 
 export function MainSection() {
 	return (
-		<div className="flex flex-col gap-[35px] lg:gap-10" id="main-section">
+		<div data-aos="fade-up" className="flex flex-col gap-[35px] lg:gap-10" id="main-section">
 			<div className="flex flex-col gap-[35px] lg:flex-row lg:justify-between">
 				<AboutMe />
 
