@@ -5,7 +5,7 @@ export function StatBadge({
 	value,
 	label,
 }: {
-	icon: any;
+	icon: React.ElementType;
 	value: string;
 	label: string;
 }) {
