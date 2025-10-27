@@ -7,10 +7,10 @@ export function Header() {
 			<div className="flex flex-col lg:gap-1">
 				<AnimatedLogo />
 
-				<h2 className="text-font-secondary text-lg font-light lg:text-xl">Full-stack Developer</h2>
+				<h2 data-aos="fade-right" className="text-font-secondary text-lg font-light lg:text-xl">Full-stack Developer</h2>
 			</div>
 
-			<nav className="hidden lg:block">
+			<nav data-aos="fade-left" className="hidden lg:block">
 				<ul className="flex gap-6">
 					<NavItem text={"Home"} link={"hero"} />
 					<NavItem text={"About Me"} link={"main-section"} />

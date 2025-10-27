@@ -13,6 +13,7 @@ export function SkillMirror({
 	return (
 		<div
 			aria-hidden={ariaHidden}
+			data-aos={reverse ? "fade-right" : "fade-left"}
 			className={`flex-center min-w-max ${reverse ? "animate-slider-reverse" : "animate-slider"} gap-3 pr-3 lg:gap-5 lg:pr-5`}
 		>
 			{data.map((skill, index) => (

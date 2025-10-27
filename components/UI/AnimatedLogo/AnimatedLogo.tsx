@@ -27,7 +27,7 @@ export function AnimatedLogo() {
 	}, []);
 
 	return (
-		<h1 className="font-bold">
+		<h1 className="font-bold flex-nowrap">
 			{logoString
 				.split("")
 				.slice(0, stringIndex)
