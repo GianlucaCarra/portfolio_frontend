@@ -6,7 +6,7 @@ import "aos/dist/aos.css";
 
 export function AOSProvider({ children }: { children: React.ReactNode }) {
 	useEffect(() => {
-		AOS.init({ duration: 800, once: true });
+		AOS.init({ duration: 800, once: true, disable: "mobile" });
 	}, []);
 
 	return <>{children}</>;

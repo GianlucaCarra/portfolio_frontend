@@ -7,7 +7,9 @@ export function Header() {
 			<div className="flex flex-col lg:gap-1">
 				<AnimatedLogo />
 
-				<h2 data-aos="fade-right" className="text-font-secondary text-lg font-light lg:text-xl">Full-stack Developer</h2>
+				<h2 data-aos="fade-right" className="text-font-secondary text-lg font-light lg:text-xl">
+					Full-stack Developer
+				</h2>
 			</div>
 
 			<nav data-aos="fade-left" className="hidden lg:block">

@@ -21,20 +21,13 @@ export function Hero() {
 					<LinkButton href="#contact" text="Contact Me" variant="black" />
 				</div>
 			</div>
-{/*
+
 			<Image
 				height={5000}
 				width={5000}
 				src="/profile.png"
 				alt={"Profile Image"}
-				className="border-accent h-[160px] w-[160px] rounded-full border-2 object-cover shadow-xl lg:hidden"
-			/> */}
-			<Image
-				height={5000}
-				width={5000}
-				src="/profile3.png"
-				alt={"Profile Image"}
-				className="absolute h-[200px] w-[200px] left-1/2 transform -translate-x-1/2 lg:left-auto lg:translate-x-0 lg:right-[-2.5%] bottom-0 lg:h-[400px] lg:w-[400px] object-cover"
+				className="absolute bottom-0 left-1/2 h-[200px] w-[200px] -translate-x-1/2 transform object-cover lg:right-[-2.5%] lg:left-auto lg:h-[400px] lg:w-[400px] lg:translate-x-0"
 			/>
 
 			<Image
@@ -42,12 +35,10 @@ export function Hero() {
 				width={5000}
 				src="/bulb.png"
 				alt={"Profile Image"}
-				className="absolute left-1/2 transform -translate-x-[-20%] lg:left-auto lg:top-0 lg:translate-x-0 lg:right-[-5%] -z-10 top-53 h-[90px] w-[120px] lg:h-[90px] lg:w-[200px] object-cover object-bottom"
+				className="absolute top-53 left-1/2 -z-10 h-[90px] w-[120px] -translate-x-[-20%] transform object-cover object-bottom lg:top-0 lg:right-[-5%] lg:left-auto lg:h-[90px] lg:w-[200px] lg:translate-x-0"
 			/>
 
-			<div className="h-[180px]">
-
-			</div>
+			<div className="h-[180px] lg:hidden" />
 		</section>
 	);
 }
