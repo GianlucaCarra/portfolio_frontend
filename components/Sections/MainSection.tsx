@@ -11,7 +11,7 @@ export function MainSection() {
 				<Skills />
 			</div>
 
-			<SkillsCarousels />
+			{/* <SkillsCarousels /> */}
 		</div>
 	);
 }

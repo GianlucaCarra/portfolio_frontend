@@ -16,26 +16,28 @@ export function Hero() {
 					I’m a developer turning great ideas into solutions.
 				</span>
 
-				<div className="flex h-fit w-full flex-col items-center gap-2 lg:items-start lg:gap-3">
+				<div className="flex h-fit w-full flex-col items-center gap-2 lg:items-start lg:gap-3 z-4">
 					<LinkButton href="#featured" text="View Projects" />
 					<LinkButton href="#contact" text="Contact Me" variant="black" />
 				</div>
 			</div>
 
 			<Image
-				height={5000}
-				width={5000}
+				height={400}
+				width={400}
 				src="/profile.png"
 				alt={"Profile Image"}
 				className="absolute bottom-0 left-1/2 h-[200px] w-[200px] -translate-x-1/2 transform object-cover lg:right-[-2.5%] lg:left-auto lg:h-[400px] lg:w-[400px] lg:translate-x-0"
+				priority
 			/>
 
 			<Image
-				height={5000}
-				width={5000}
+				height={90}
+				width={200}
 				src="/bulb.png"
-				alt={"Profile Image"}
-				className="absolute top-53 left-1/2 -z-10 h-[90px] w-[120px] -translate-x-[-20%] transform object-cover object-bottom lg:top-0 lg:right-[-5%] lg:left-auto lg:h-[90px] lg:w-[200px] lg:translate-x-0"
+				alt={"Bulb Image"}
+				className="absolute top-53 left-1/2  h-[90px] w-[120px] z-0 -translate-x-[-20%] transform object-cover object-bottom lg:top-0 lg:right-[-5%] lg:left-auto lg:w-[200px] lg:translate-x-0"
+				priority
 			/>
 
 			<div className="h-[180px] lg:hidden" />
