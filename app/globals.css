@@ -25,9 +25,13 @@
 	}
 
 	@keyframes shimmer {
-	0% { width: 0%; }
-	100% { width: var(--skill-width); }
-}
+		0% {
+			width: 0%;
+		}
+		100% {
+			width: var(--skill-width);
+		}
+	}
 }
 
 html.light {

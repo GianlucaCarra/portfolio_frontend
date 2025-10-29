@@ -16,7 +16,7 @@ export function Hero() {
 					I’m a developer turning great ideas into solutions.
 				</span>
 
-				<div className="flex h-fit w-full flex-col items-center gap-2 lg:items-start lg:gap-3 z-4">
+				<div className="z-4 flex h-fit w-full flex-col items-center gap-2 lg:items-start lg:gap-3">
 					<LinkButton href="#featured" text="View Projects" />
 					<LinkButton href="#contact" text="Contact Me" variant="black" />
 				</div>
@@ -36,7 +36,7 @@ export function Hero() {
 				width={200}
 				src="/bulb.png"
 				alt={"Bulb Image"}
-				className="absolute top-53 left-1/2  h-[90px] w-[120px] z-0 -translate-x-[-20%] transform object-cover object-bottom lg:top-0 lg:right-[-5%] lg:left-auto lg:w-[200px] lg:translate-x-0"
+				className="absolute top-53 left-1/2 z-0 h-[90px] w-[120px] -translate-x-[-20%] transform object-cover object-bottom lg:top-0 lg:right-[-5%] lg:left-auto lg:w-[200px] lg:translate-x-0"
 				priority
 			/>
 

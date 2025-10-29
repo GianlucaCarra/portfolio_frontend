@@ -7,10 +7,10 @@ export function useOnScreen<T extends HTMLDivElement>(options?: IntersectionObse
 	useEffect(() => {
 		if (!ref.current) return;
 
-		const observer = new IntersectionObserver(
-			([entry]) => setIsVisible(entry.isIntersecting),
-			{ threshold: 0, ...options }
-		);
+		const observer = new IntersectionObserver(([entry]) => setIsVisible(entry.isIntersecting), {
+			threshold: 0,
+			...options,
+		});
 
 		observer.observe(ref.current);
 
