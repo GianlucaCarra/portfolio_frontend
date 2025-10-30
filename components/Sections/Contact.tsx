@@ -48,7 +48,7 @@ export function Contact() {
 			<SectionTitle text={"Contact"} />
 
 			<p className="text-font-secondary">
-				Feel free to get in touch, I'll make sure to answer ASAP!
+				Feel free to get in touch, I&apos;ll make sure to answer ASAP!
 			</p>
 
 			<div className="grid gap-3 select-text sm:grid-cols-2 lg:grid-cols-3 lg:gap-4">
