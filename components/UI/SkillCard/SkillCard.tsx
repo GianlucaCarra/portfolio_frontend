@@ -6,9 +6,9 @@ import { useEffect, useRef, useState } from "react";
 
 export function SkillCard({ type, techs }: { type: "front" | "back" | "other"; techs: Tech[] }) {
 	const techType = {
-		front: { title: "Frontend Development", color: "#3b82f6" }, // Azul vibrante
-		back: { title: "Backend & Database", color: "#8b5cf6" }, // Roxo moderno
-		other: { title: "Tools & DevOps", color: "#10b981" }, // Verde esmeralda
+		front: { title: "Frontend Development", color: "#3b82f6" },
+		back: { title: "Backend & Database", color: "#8b5cf6" },
+		other: { title: "Tools & DevOps", color: "#10b981" },
 	};
 
 	const techMap = techType[type];
