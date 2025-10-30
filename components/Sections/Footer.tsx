@@ -2,25 +2,24 @@ import { LiaGithub } from "react-icons/lia";
 
 export function Footer() {
 	return (
-		<footer
-			className="flex-center bg-background-secondary absolute bottom-0 left-0 w-full gap-3 py-4 lg:gap-4"
-			id="footer"
-		>
-			<span className="font-heading text-font-primary text-xs font-light lg:text-sm">
-				© 2025 Gianluca Carra
-			</span>
+		<footer className="bg-background-secondary text-font-primary border-font-primary/20 mt-auto flex flex-col items-center justify-center gap-3 border-t py-4">
+			<div className="flex items-center gap-3">
+				<span className="font-heading text-xs font-light lg:text-sm">
+					© {new Date().getFullYear()} Gianluca Carra
+				</span>
 
-			<div className="bg-font-primary h-5 w-[0.4px] lg:h-7" />
+				<div className="bg-font-primary/40 h-5 w-[1px] lg:h-7" />
 
-			<a
-				href="https://github.com/GianlucaCarra/portfolio_frontend"
-				target="_blank"
-				rel="noopener noreferrer"
-				className="flex-center gap-1.5 text-xs font-semibold hover:opacity-80 lg:text-sm"
-			>
-				<LiaGithub size={20} className="hidden lg:block" />
-				See this project on GitHub
-			</a>
+				<a
+					href="https://github.com/GianlucaCarra/portfolio_frontend"
+					target="_blank"
+					rel="noopener noreferrer"
+					className="flex items-center gap-1.5 text-xs font-semibold transition-opacity hover:scale-104 hover:opacity-80 lg:text-sm"
+				>
+					<LiaGithub size={20} className="hidden lg:block" />
+					See this project on GitHub
+				</a>
+			</div>
 		</footer>
 	);
 }

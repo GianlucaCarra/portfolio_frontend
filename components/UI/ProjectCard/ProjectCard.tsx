@@ -1,6 +1,7 @@
+import Link from "next/link";
 import Image from "next/image";
 import { ProjectTag } from "../ProjectTag/ProjectTag";
-import Link from "next/link";
+import { BiChevronRight } from "react-icons/bi";
 
 export function ProjectCard({
 	projectId,
@@ -16,34 +17,41 @@ export function ProjectCard({
 	tags: { id: string; name: string }[];
 }) {
 	return (
-		<div className="bg-background-secondary flex min-w-[280px] flex-col gap-3 rounded-[5px] p-3 lg:min-w-[320px] lg:gap-4 lg:rounded-[7px] lg:p-4">
-			<Image
-				width={1920}
-				height={1080}
-				src={image}
-				alt={`${title} project thumbnail`}
-				className="aspect-video h-[150px] w-full rounded-[2px] object-cover object-top-left lg:h-[190px] lg:rounded-[4px]"
-			/>
+		<Link
+			href={`/projects/${projectId}`}
+			className="group/card block snap-center"
+			aria-label={`See details of project ${title}`}
+		>
+			<div className="bg-background-secondary lg:max-w-[320px]lg:gap-4 flex max-w-[280px] min-w-[280px] flex-col gap-3 rounded-[5px] p-3 shadow-lg transition-all duration-200 hover:scale-[1.02] hover:shadow-xl lg:min-w-[320px] lg:rounded-[7px] lg:p-4">
+				<div className="relative overflow-hidden rounded-[2px] lg:rounded-[4px]">
+					<Image
+						width={1920}
+						height={1080}
+						src={image}
+						alt={`${title} project thumbnail`}
+						className="aspect-video h-[150px] w-full object-cover object-top transition-transform duration-300 group-hover/card:scale-105 lg:h-[190px]"
+					/>
+				</div>
 
-			<h4 className="line-clamp-1 w-full truncate overflow-hidden text-base font-medium text-ellipsis lg:text-lg">
-				{title}
-			</h4>
+				<h4 className="text-font-primary line-clamp-1 w-full text-base font-medium lg:text-lg">
+					{title}
+				</h4>
 
-			<span className="line-clamp-4 w-full overflow-hidden text-base text-ellipsis">{desc}</span>
+				<p className="text-font-secondary line-clamp-3 text-sm leading-relaxed lg:text-base">
+					{desc}
+				</p>
 
-			<div className="scrollbar-hidden flex gap-1 overflow-x-auto">
-				{tags.map((tag) => (
-					<ProjectTag key={tag.id} name={tag.name} />
-				))}
+				<div className="scrollbar-hidden flex gap-1.5 overflow-x-auto mask-r-from-97% mask-l-from-97% px-1">
+					{tags.map((tag) => (
+						<ProjectTag key={tag.id} name={tag.name} />
+					))}
+				</div>
+
+				<span className="text-accent mt-auto flex items-center gap-1 text-sm font-medium lg:text-base">
+					See Project
+					<BiChevronRight className="h-4 w-4 transition-transform group-hover/card:translate-x-1 lg:h-5 lg:w-5" />
+				</span>
 			</div>
-
-			<Link
-				href={`/projects/${projectId}`}
-				className="text-accent text-sm hover:opacity-80 lg:text-base"
-			>
-				See more
-			</Link>
-		</div>
+		</Link>
 	);
 }
-//ProjectTag Slider mask-r-from-97% mask-l-from-97% px-1

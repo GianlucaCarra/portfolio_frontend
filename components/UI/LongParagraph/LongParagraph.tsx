@@ -57,7 +57,7 @@ export function LongParagraph({ paragraphs }: { paragraphs: string[] }) {
 	}, [paragraphs.length]);
 
 	return (
-		<div className="relative mx-auto w-full">
+		<div className="relative mx-auto w-full select-text">
 			<div
 				ref={containerRef}
 				className="scrollbar-hide relative flex h-[200px] snap-y snap-mandatory flex-col items-center gap-8 overflow-y-auto mask-t-from-85% mask-b-from-85% py-10"

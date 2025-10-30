@@ -8,20 +8,22 @@ import { MainSection } from "@/components/Sections/MainSection";
 
 export default function Home() {
 	return (
-		<div className="bg-background-primary scrollbar-hidden relative flex flex-col gap-[35px] p-6 lg:gap-20 lg:px-12 lg:py-8 xl:px-[6%]">
-			<ToggleTheme />
+		<main className="bg-background-primary scrollbar-hidden">
+			<div className="bg-background-primary scrollbar-hidden relative flex flex-col gap-[35px] p-6 lg:gap-20 lg:px-12 lg:py-8 xl:px-[6%]">
+				<ToggleTheme />
 
-			<Header />
+				<Header />
 
-			<Hero />
+				<Hero />
 
-			<MainSection />
+				<MainSection />
 
-			<FeaturedProjects />
+				<FeaturedProjects />
 
-			<Contact />
+				<Contact />
+			</div>
 
 			<Footer />
-		</div>
+		</main>
 	);
 }

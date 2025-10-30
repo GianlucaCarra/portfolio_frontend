@@ -67,6 +67,9 @@ body {
 		color 0.4s ease,
 		border-color 0.4s ease,
 		opacity 0.4s ease,
+		transform 0.4s ease,
+		translate 0.4s ease,
+		box-shadow 0.4s ease,
 		scale 0.4s ease;
 }
 

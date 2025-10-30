@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en" className="dark scrollbar-hidden">
-			<body className="scrollbar-hidden">
+			<body className="scrollbar-hidden select-none">
 				<AuthProvider>
 					<ThemeProvider>
 						<AOSProvider>{children}</AOSProvider>
