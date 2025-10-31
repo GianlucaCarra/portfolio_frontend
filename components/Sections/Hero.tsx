@@ -33,10 +33,10 @@ export function Hero() {
 
 			<Image
 				height={90}
-				width={200}
+				width={100}
 				src="/bulb.png"
 				alt={"Bulb Image"}
-				className="absolute top-53 left-1/2 z-0 h-[90px] w-[120px] -translate-x-[-20%] transform object-cover object-bottom lg:top-0 lg:right-[-5%] lg:left-auto lg:w-[200px] lg:translate-x-0"
+				className="absolute top-53 left-1/2 z-0 h-[110px] w-[50px] -translate-x-[-80%] transform object-cover object-bottom lg:top-0 lg:right-3 lg:left-auto lg:h-[100px] lg:w-[80px] lg:translate-x-0"
 				priority
 			/>
 

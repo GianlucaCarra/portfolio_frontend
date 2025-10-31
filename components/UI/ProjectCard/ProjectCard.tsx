@@ -1,7 +1,9 @@
+"use client";
 import Link from "next/link";
 import Image from "next/image";
 import { ProjectTag } from "../ProjectTag/ProjectTag";
 import { BiChevronRight } from "react-icons/bi";
+import { useRef } from "react";
 
 export function ProjectCard({
 	projectId,
@@ -16,13 +18,36 @@ export function ProjectCard({
 	desc: string;
 	tags: { id: string; name: string }[];
 }) {
+	const scrollRef = useRef<HTMLDivElement>(null);
+
+	function handleMouseEnter() {
+		const el = scrollRef.current;
+		if (!el) return;
+
+		const parentWidth = el.parentElement?.offsetWidth ?? 0;
+		const scrollWidth = el.scrollWidth;
+		const maxTranslate = scrollWidth - parentWidth;
+		el.style.transform = `translateX(-${maxTranslate}px)`;
+		el.style.transition = "2000ms";
+	}
+
+	function handleMouseLeave() {
+		const el = scrollRef.current;
+		if (!el) return;
+		el.style.transform = "translateX(0)";
+	}
+
 	return (
 		<Link
 			href={`/projects/${projectId}`}
 			className="group/card block snap-center"
 			aria-label={`See details of project ${title}`}
 		>
-			<div className="bg-background-secondary lg:max-w-[320px]lg:gap-4 flex max-w-[280px] min-w-[280px] flex-col gap-3 rounded-[5px] p-3 shadow-lg transition-all duration-200 hover:scale-[1.02] hover:shadow-xl lg:min-w-[320px] lg:rounded-[7px] lg:p-4">
+			<div
+				className="bg-background-secondary lg:max-w-[320px]lg:gap-4 flex max-w-[280px] min-w-[280px] flex-col gap-3 rounded-[5px] p-3 shadow-lg transition-all duration-200 hover:scale-[1.02] hover:shadow-xl lg:min-w-[320px] lg:rounded-[7px] lg:p-4"
+				onMouseEnter={handleMouseEnter}
+				onMouseLeave={handleMouseLeave}
+			>
 				<div className="relative overflow-hidden rounded-[2px] lg:rounded-[4px]">
 					<Image
 						width={1920}
@@ -41,10 +66,15 @@ export function ProjectCard({
 					{desc}
 				</p>
 
-				<div className="scrollbar-hidden flex gap-1.5 overflow-x-auto mask-r-from-97% mask-l-from-97% px-1">
-					{tags.map((tag) => (
-						<ProjectTag key={tag.id} name={tag.name} />
-					))}
+				<div className="relative h-[30px] w-full overflow-x-auto mask-r-from-95% mask-l-from-95% px-1 lg:h-[40px]">
+					<div
+						ref={scrollRef}
+						className="absolute top-0 left-0 flex gap-1.5 px-1.5 duration-[13000ms] ease-linear lg:px-2 lg:transition-transform"
+					>
+						{tags.map((tag) => (
+							<ProjectTag key={tag.id} name={tag.name} />
+						))}
+					</div>
 				</div>
 
 				<span className="text-accent mt-auto flex items-center gap-1 text-sm font-medium lg:text-base">

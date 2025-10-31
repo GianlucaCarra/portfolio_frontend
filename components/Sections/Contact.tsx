@@ -58,7 +58,7 @@ export function Contact() {
 						href={contact.link}
 						target="_blank"
 						rel="noopener noreferrer"
-						className="group bg-background-secondary border-font-secondary/20 relative overflow-hidden rounded-lg border p-6 hover:scale-105 hover:border-blue-500 hover:shadow-lg"
+						className="group bg-background-secondary border-font-secondary/20 relative overflow-hidden rounded-lg border p-6 hover:z-20 hover:scale-105 hover:border-blue-500 hover:shadow-lg"
 					>
 						<div className="bg-accent/10 text-accent group-hover:bg-accent mb-4 flex h-12 w-12 items-center justify-center rounded-full transition-colors group-hover:text-white">
 							{contact.icon}
