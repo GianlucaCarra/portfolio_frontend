@@ -10,36 +10,39 @@ import Link from "next/link";
 import { SectionTitle } from "@/components/UI/SectionTitle/SectionTitle";
 import { LinkCard } from "@/components/UI/LinkCard/LinkCard";
 
-export default async function ProjectPage({ params }: { params: { id: string }}) {
+export default async function ProjectPage({ params }: { params: { id: string } }) {
 	const { id } = await params;
 	const { data }: { data: Project } = await getProject(id);
 
 	const links: { link: string | undefined; type: "front" | "back" | "live" }[] = [
 		{ link: data.frontendUrl, type: "front" },
 		{ link: data.backendUrl, type: "back" },
-		{ link: data.liveUrl, type: "live" }
+		{ link: data.liveUrl, type: "live" },
 	];
 
 	return (
-		<div className="min-h-screen bg-background-primary">
+		<div className="bg-background-primary min-h-screen">
 			<div className="relative mx-auto max-w-6xl px-4 py-8 md:px-8">
-				<div className="mb-6 lg:mb-8 flex items-center justify-between">
-					<Link href={"/"} className="group text-font-secondary flex items-center gap-1 lg:gap-2 transition-colors">
+				<div className="mb-6 flex items-center justify-between lg:mb-8">
+					<Link
+						href={"/"}
+						className="group text-font-secondary flex items-center gap-1 transition-colors lg:gap-2"
+					>
 						<BiChevronLeft className="h-5.5 w-5.5 transition-transform group-hover:-translate-x-1" />
 
 						<span className="font-medium">Back</span>
 					</Link>
 
-					<div className="flex items-center gap-3 lg:py-2 rounded-full border border-font-secondary/10 bg-background-secondary/50 px-3.5 py-1.5 lg:px-4 backdrop-blur-sm">
+					<div className="border-font-secondary/10 bg-background-secondary/50 flex items-center gap-3 rounded-full border px-3.5 py-1.5 backdrop-blur-sm lg:px-4 lg:py-2">
 						<div className="h-2 w-2 animate-pulse rounded-full bg-green-500" />
 
-						<span className="text-sm font-medium text-font-secondary">
+						<span className="text-font-secondary text-sm font-medium">
 							{/* {data.status} */} In Development
 						</span>
 					</div>
 				</div>
 
-				<div className="mb-8 lg:mb-10 text-center">
+				<div className="mb-8 text-center lg:mb-10">
 					<h1 className="animate-fade-in mb-4 text-3xl font-bold text-slate-900 md:text-5xl dark:text-white">
 						{data.name}
 					</h1>
@@ -57,10 +60,10 @@ export default async function ProjectPage({ params }: { params: { id: string }})
 
 				<SectionTitle text={"Explore More"} />
 
-				<div className="flex flex-col gap-3 lg:flex-row mt-3 lg:mt-4">
-					{links.map(({ link, type }, i) => (
+				<div className="mt-3 flex flex-col gap-3 lg:mt-4 lg:flex-row">
+					{links.map(
+						({ link, type }, i) =>
 							typeof link == "string" && <LinkCard key={i} link={link} type={type} />
-						)
 					)}
 				</div>
 			</div>

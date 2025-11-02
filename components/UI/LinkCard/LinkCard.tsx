@@ -1,6 +1,6 @@
 import { BiCode, BiGlobe, BiLinkExternal, BiLogoGithub } from "react-icons/bi";
 
-export function LinkCard({ link, type }: { link: string, type: "live" | "front" | "back" }) {
+export function LinkCard({ link, type }: { link: string; type: "live" | "front" | "back" }) {
 	// const [hoveredLink, setHoveredLink] = useState(null);
 
 	const linkTypes = {
@@ -22,7 +22,7 @@ export function LinkCard({ link, type }: { link: string, type: "live" | "front" 
 			color: "from-orange-500 to-red-500",
 			description: "Explore the backend code",
 		},
-	}
+	};
 	const linkMap = linkTypes[type];
 	const Icon = linkMap.icon;
 
@@ -31,21 +31,22 @@ export function LinkCard({ link, type }: { link: string, type: "live" | "front" 
 			href={link}
 			target="_blank"
 			rel="noopener noreferrer"
-			className="group overflow-hidden flex gap-4 w-full rounded-2xl border border-font-secondary/10 bg-background-secondary/50 p-3 lg:p-5 shadow-lg lg:basis-1/3 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+			className="group border-font-secondary/10 bg-background-secondary/50 flex w-full gap-4 overflow-hidden rounded-2xl border p-3 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl lg:basis-1/3 lg:p-5"
 		>
-
-			<div className={`relative h-12 w-12 lg:h-15 lg:w-15 shrink-0 rounded-xl bg-gradient-to-br ${linkMap.color} flex transform items-center justify-center transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3`}>
-				<Icon className="h-6 w-6 lg:h-8 lg:w-8 text-white" />
+			<div
+				className={`relative h-12 w-12 shrink-0 rounded-xl bg-gradient-to-br lg:h-15 lg:w-15 ${linkMap.color} flex transform items-center justify-center transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3`}
+			>
+				<Icon className="h-6 w-6 text-white lg:h-8 lg:w-8" />
 			</div>
 
-			<div className="relative w-full h-fit">
-				<h3 className="mb-1.5 flex items-center justify-between text-base lg:text-lg font-bold text-font-primary">
+			<div className="relative h-fit w-full">
+				<h3 className="text-font-primary mb-1.5 flex items-center justify-between text-base font-bold lg:text-lg">
 					{linkMap.label}
 
-					<BiLinkExternal className="h-4 w-4 text-font-secondary transform opacity-0 transition-all group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:opacity-100" />
+					<BiLinkExternal className="text-font-secondary h-4 w-4 transform opacity-0 transition-all group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:opacity-100" />
 				</h3>
 
-				<p className="text-sm lg:text-base text-font-secondary">{linkMap.description}</p>
+				<p className="text-font-secondary text-sm lg:text-base">{linkMap.description}</p>
 			</div>
 		</a>
 	);

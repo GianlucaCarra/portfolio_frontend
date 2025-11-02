@@ -8,5 +8,5 @@ export interface Project {
 	frontendUrl?: string;
 	backendUrl?: string;
 	liveUrl?: string;
-	status: "Production" | "Development" | "Test"
+	status: "Production" | "Development" | "Test";
 }
