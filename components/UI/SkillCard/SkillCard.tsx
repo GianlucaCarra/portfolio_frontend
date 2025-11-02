@@ -1,8 +1,5 @@
-"use client";
-
 import { Tech } from "@/types/tech.interface";
 import { SkillBar } from "../SkillBar/SkillBar";
-import { useEffect, useRef, useState } from "react";
 
 export function SkillCard({ type, techs }: { type: "front" | "back" | "other"; techs: Tech[] }) {
 	const techType = {

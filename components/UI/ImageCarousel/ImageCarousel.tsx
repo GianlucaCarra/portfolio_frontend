@@ -3,57 +3,48 @@ import Image from "next/image";
 import { useState } from "react";
 import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 
-export function ImageCarousel({ images }: { images: { id: string; imageUrl: string }[] }) {
-	const [imageIndex, setImageIndex] = useState(0);
-
-	const prevImage = () => {
-		setImageIndex((prevIndex) => (prevIndex === 0 ? images.length - 1 : prevIndex - 1));
-	};
-
-	const nextImage = () => {
-		setImageIndex((prevIndex) => (prevIndex === images.length - 1 ? 0 : prevIndex + 1));
-	};
-
-	const goToImage = (index: number) => {
-		setImageIndex(index);
-	};
+export function ImageCarousel({ data }: { data: { id: string; imageUrl: string }[] }) {
+	const [activeImage, setActiveImage] = useState(0);
 
 	return (
-		<div className="relative flex w-full items-center rounded-[5px]">
-			<div className="relative h-64 w-full overflow-hidden">
-				{images.map((image, idx) => (
-					<Image
-						className={`${idx === imageIndex ? "z-1 opacity-100" : "pointer-events-none z-0 opacity-0"} absolute aspect-video h-full w-full rounded-[5px] object-cover object-top-left transition-opacity`}
-						key={image.id}
-						src={image.imageUrl}
-						width={2000}
-						height={2000}
-						alt={""}
-					/>
-				))}
+		<div className="mb-8 lg:mb-10">
+			<div className="relative aspect-video overflow-hidden rounded-2xl bg-white shadow-2xl dark:bg-slate-800">
+				<img
+					src={data[activeImage].imageUrl}
+					alt={`Project screenshot ${activeImage + 1}`}
+					className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+				/>
+
+				<div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 gap-2">
+					{data.map((_, index) => (
+						<button
+							key={index}
+							onClick={() => setActiveImage(index)}
+							className={`h-3 w-3 rounded-full transition-all ${
+								index === activeImage ? "w-8 bg-white" : "bg-white/50 hover:bg-white/75"
+							}`}
+						/>
+					))}
+				</div>
 			</div>
 
-			<button
-				onClick={prevImage}
-				className="bg-background-primary absolute left-2 z-2 rounded-full p-1"
-			>
-				<MdChevronLeft className="text-font-primary" size={20} />
-			</button>
-
-			<button
-				onClick={nextImage}
-				className="bg-background-primary absolute right-2 z-2 rounded-full p-1"
-			>
-				<MdChevronRight className="text-font-primary" size={20} />
-			</button>
-
-			<div className="absolute bottom-2 left-1/2 z-2 flex -translate-x-1/2 gap-2">
-				{images.map((_, idx) => (
+			<div className="mt-4 flex gap-3 overflow-x-visible pb-2">
+				{data.map((img, index) => (
 					<button
-						className={`h-2 w-2 rounded-full ${imageIndex === idx ? "bg-accent" : "bg-background-secondary"}`}
-						key={idx}
-						onClick={() => goToImage(idx)}
-					/>
+						key={index}
+						onClick={() => setActiveImage(index)}
+						className={`h-16 w-24 flex-shrink-0 overflow-hidden rounded-lg border-2 transition-all ${
+							index === activeImage
+								? "scale-105 border-blue-500"
+								: "border-slate-300 opacity-60 hover:opacity-100 dark:border-slate-700"
+						}`}
+					>
+						<img
+							src={img.imageUrl}
+							alt={`Thumbnail ${index + 1}`}
+							className="h-full w-full object-cover"
+						/>
+					</button>
 				))}
 			</div>
 		</div>

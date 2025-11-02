@@ -57,7 +57,7 @@ export function CardSelector() {
 
 	return (
 		<div className="flex-center-col max-h-fit w-full lg:gap-4">
-			<div className="flex-center my-3 flex-wrap gap-2 lg:my-4 lg:gap-3">
+			<div className="flex-center my-5 flex-wrap gap-2 lg:my-4 lg:gap-3">
 				<SelectorButton
 					onClick={() => handleToggle("back")}
 					label={"Backend"}

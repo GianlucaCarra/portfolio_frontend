@@ -8,6 +8,7 @@
 	--animate-slider: slider 20s linear infinite;
 	--animate-slider-reverse: slider 20s linear infinite reverse;
 	--animate-shimmer: shimmer 1.5s ease-in-out forwards;
+	--animate-fade-in: fade-in 0.6s ease-out;
 
 	--color-accent: #0070f3;
 	--color-background-primary: var(--background-primary);
@@ -31,6 +32,11 @@
 		100% {
 			width: var(--skill-width);
 		}
+	}
+
+	@keyframes fade-in {
+  	from { opacity: 0; transform: translateY(-20px); }
+  	to { opacity: 1; transform: translateY(0); }
 	}
 }
 
