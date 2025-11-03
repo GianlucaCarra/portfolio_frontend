@@ -3,7 +3,6 @@
 import { useRef } from "react";
 import { Project } from "@/types/project.interface";
 import { ProjectCard } from "../ProjectCard/ProjectCard";
-import { LuChevronLeft, LuChevronRight } from "react-icons/lu";
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
 
 export function ProjectCarousel({ data }: { data: Project[] }) {

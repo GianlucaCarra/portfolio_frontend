@@ -1,5 +1,7 @@
+import { IconType } from "react-icons";
+
 export interface Tech {
 	name: string;
-	logo: any;
+	logo: IconType;
 	experience: number;
 }

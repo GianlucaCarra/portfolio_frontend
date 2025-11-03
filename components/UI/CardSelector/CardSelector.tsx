@@ -20,7 +20,6 @@ import { useState } from "react";
 import { SelectorButton } from "../SelectorButton/SelectorButton";
 import { SkillCard } from "../SkillCard/SkillCard";
 import { Tech } from "@/types/tech.interface";
-import { HiCodeBracketSquare } from "react-icons/hi2";
 
 const front: Tech[] = [
 	{

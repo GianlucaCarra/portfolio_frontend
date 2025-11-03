@@ -1,4 +1,3 @@
-import { SkillsCarousels } from "../UI/SkillsCarousels/SkillsCarousels";
 import { AboutMe } from "./AboutMe";
 import { Skills } from "./Skills";
 

@@ -1,9 +1,7 @@
 import { BiChevronRight } from "react-icons/bi";
 import { SectionTitle } from "../UI/SectionTitle/SectionTitle";
-import { CgMail } from "react-icons/cg";
 import { IconType } from "react-icons";
-import { BsEnvelope, BsLinkedin, BsMailbox, BsWhatsapp } from "react-icons/bs";
-import { LiaLinkedin } from "react-icons/lia";
+import { BsEnvelope, BsLinkedin, BsWhatsapp } from "react-icons/bs";
 
 export function Contact() {
 	const contacts: {

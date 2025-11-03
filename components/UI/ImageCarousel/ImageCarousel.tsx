@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
-import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 
 export function ImageCarousel({ data }: { data: { id: string; imageUrl: string }[] }) {
 	const [activeImage, setActiveImage] = useState(0);
@@ -9,7 +8,7 @@ export function ImageCarousel({ data }: { data: { id: string; imageUrl: string }
 	return (
 		<div className="mb-8 lg:mb-10">
 			<div className="relative aspect-video overflow-hidden rounded-2xl bg-white shadow-2xl dark:bg-slate-800">
-				<img
+				<Image
 					src={data[activeImage].imageUrl}
 					alt={`Project screenshot ${activeImage + 1}`}
 					className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
@@ -39,7 +38,7 @@ export function ImageCarousel({ data }: { data: { id: string; imageUrl: string }
 								: "border-slate-300 opacity-60 hover:opacity-100 dark:border-slate-700"
 						}`}
 					>
-						<img
+						<Image
 							src={img.imageUrl}
 							alt={`Thumbnail ${index + 1}`}
 							className="h-full w-full object-cover"
