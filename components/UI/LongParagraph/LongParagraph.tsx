@@ -34,7 +34,6 @@ export function LongParagraph({ paragraphs }: { paragraphs: string[] }) {
 		setActiveIndex(closestIndex);
 	};
 
-	// Debounced scroll handler for better performance
 	useEffect(() => {
 		const container = containerRef.current;
 		if (!container) return;
@@ -47,7 +46,6 @@ export function LongParagraph({ paragraphs }: { paragraphs: string[] }) {
 
 		container.addEventListener("scroll", debouncedScroll, { passive: true });
 
-		// Initial check
 		handleScroll();
 
 		return () => {
@@ -60,7 +58,7 @@ export function LongParagraph({ paragraphs }: { paragraphs: string[] }) {
 		<div className="relative mx-auto w-full select-text">
 			<div
 				ref={containerRef}
-				className="scrollbar-hide relative flex h-[200px] snap-y snap-mandatory flex-col items-center gap-8 overflow-y-auto mask-t-from-85% mask-b-from-85% py-10"
+				className="scrollbar-hide relative flex h-[250px] snap-y snap-mandatory flex-col items-center gap-8 overflow-y-auto mask-t-from-85% mask-b-from-85% py-14"
 				style={{
 					scrollbarWidth: "none",
 					msOverflowStyle: "none",
@@ -72,7 +70,7 @@ export function LongParagraph({ paragraphs }: { paragraphs: string[] }) {
 						ref={(el) => {
 							paragraphRefs.current[idx] = el;
 						}}
-						className={`snap-center px-6 text-center text-sm transition-all duration-300 lg:text-base ${
+						className={`snap-start px-6 text-center text-sm transition-all duration-300 lg:text-base ${
 							idx === activeIndex ? "scale-100 opacity-100" : "scale-95 opacity-40"
 						}`}
 					>

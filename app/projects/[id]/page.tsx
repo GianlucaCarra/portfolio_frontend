@@ -43,7 +43,7 @@ export default async function ProjectPage({ params }: { params: { id: string } }
 				</div>
 
 				<div className="mb-8 text-center lg:mb-10">
-					<h1 className="animate-fade-in mb-4 text-3xl font-bold text-slate-900 md:text-5xl dark:text-white">
+					<h1 className="animate-fade-in text-font-primary mb-4 text-3xl font-bold md:text-5xl">
 						{data.name}
 					</h1>
 

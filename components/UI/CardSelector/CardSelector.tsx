@@ -1,49 +1,103 @@
 "use client";
 
+import {
+	SiNextdotjs,
+	SiReact,
+	SiTailwindcss,
+	SiReactquery,
+	SiTypescript,
+	SiNodedotjs,
+	SiNestjs,
+	SiDotnet,
+	SiPostgresql,
+	SiGraphql,
+	SiGit,
+	SiGithub,
+	SiDocker,
+	SiJest,
+} from "react-icons/si";
 import { useState } from "react";
 import { SelectorButton } from "../SelectorButton/SelectorButton";
 import { SkillCard } from "../SkillCard/SkillCard";
 import { Tech } from "@/types/tech.interface";
-import { GiFragmentedSword } from "react-icons/gi";
-import { PiBracketsAngleBold } from "react-icons/pi";
 import { HiCodeBracketSquare } from "react-icons/hi2";
 
 const front: Tech[] = [
 	{
-		name: "Next / React",
-		logo: HiCodeBracketSquare,
+		name: "Next.js",
+		logo: SiNextdotjs,
 		experience: 90,
 	},
 	{
-		name: "Tailwind",
-		logo: HiCodeBracketSquare,
+		name: "React",
+		logo: SiReact,
 		experience: 95,
 	},
 	{
-		name: "NodeJS",
-		logo: HiCodeBracketSquare,
-		experience: 80,
+		name: "Tailwind CSS",
+		logo: SiTailwindcss,
+		experience: 95,
 	},
 	{
-		name: "Postgres",
-		logo: HiCodeBracketSquare,
-		experience: 100,
+		name: "React Query",
+		logo: SiReactquery,
+		experience: 85,
+	},
+	{
+		name: "TypeScript",
+		logo: SiTypescript,
+		experience: 95,
 	},
 ];
 
 const back: Tech[] = [
 	{
+		name: "Node.js",
+		logo: SiNodedotjs,
+		experience: 85,
+	},
+	{
 		name: "NestJS",
-		logo: HiCodeBracketSquare,
-		experience: 95,
+		logo: SiNestjs,
+		experience: 80,
+	},
+	{
+		name: ".NET / C#",
+		logo: SiDotnet,
+		experience: 75,
+	},
+	{
+		name: "PostgreSQL",
+		logo: SiPostgresql,
+		experience: 90,
+	},
+	{
+		name: "GraphQL",
+		logo: SiGraphql,
+		experience: 80,
 	},
 ];
 
 const other: Tech[] = [
 	{
-		name: "GitHub",
-		logo: HiCodeBracketSquare,
+		name: "Git",
+		logo: SiGit,
 		experience: 100,
+	},
+	{
+		name: "GitHub",
+		logo: SiGithub,
+		experience: 100,
+	},
+	{
+		name: "Docker",
+		logo: SiDocker,
+		experience: 85,
+	},
+	{
+		name: "Jest",
+		logo: SiJest,
+		experience: 80,
 	},
 ];
 

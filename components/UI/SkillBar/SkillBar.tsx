@@ -23,8 +23,8 @@ export function SkillBar({
 
 	return (
 		<div className="flex flex-col items-center gap-1 lg:gap-2">
-			<div className="flex w-full items-center gap-1.5">
-				<Icon className="text-accent text-lg font-black lg:text-2xl" />
+			<div className="flex w-full items-center gap-1.5 lg:gap-2">
+				<Icon className="text-accent text-base font-black lg:text-xl" />
 
 				<h4 className="text-sm font-medium lg:text-base">{text}</h4>
 			</div>

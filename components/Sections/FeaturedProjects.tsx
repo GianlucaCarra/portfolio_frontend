@@ -9,7 +9,13 @@ export async function FeaturedProjects() {
 		<section className="flex flex-col gap-3 overflow-y-visible lg:gap-4" id="featured">
 			<SectionTitle text="Featured Projects" />
 
-			<ProjectCarousel data={data} />
+			<p className="mt-4 self-center text-center lg:mt-6 lg:max-w-[60%]">
+				I recently performed a hard reset on my GitHub account, which temporarily removed all my
+				repositories. I’m currently rebuilding my portfolio and will be showcasing new projects
+				soon. Stay tuned for updates!
+			</p>
+
+			{/* <ProjectCarousel data={data} /> */}
 		</section>
 	);
 }

@@ -1,4 +1,3 @@
-import { Project } from "@/types/project.interface";
 import api from "./api";
 
 export async function login(email: string, secret: string): Promise<any> {

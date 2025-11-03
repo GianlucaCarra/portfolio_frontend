@@ -8,8 +8,9 @@ export function Skills() {
 			<SectionTitle text="Skills & Expertise" />
 
 			<div className="flex flex-col gap-4">
-				<SkillPoint text="Lorem ipsum dolor sit amet consectetur adipisicing elit. esse voluptatibus quas ex eos suscipit blanditiis dolorem del" />
-				<SkillPoint text="Lorem ipsum dolor sit amet consectetur adipisicing elit." />
+				<SkillPoint text="I break down complex challenges into elegant, scalable solutions that drive real business value." />
+				<SkillPoint text="Quick to adapt and master new technologies, always staying ahead of industry trends." />
+				<SkillPoint text="Obsessed with code quality, performance optimization, and delivering pixel-perfect implementations." />
 			</div>
 
 			<CardSelector />

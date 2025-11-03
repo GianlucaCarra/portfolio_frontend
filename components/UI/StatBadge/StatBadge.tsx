@@ -20,7 +20,7 @@ export function StatBadge({
 
 			<div className="flex flex-col gap-0.5">
 				<span className="text-font-primary font-heading text-xl font-bold text-nowrap lg:text-2xl">
-					{value}+
+					{value}
 				</span>
 				<span className="text-font-secondary font-heading text-xs text-nowrap lg:text-sm">
 					{label}

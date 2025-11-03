@@ -16,7 +16,7 @@ export function Header() {
 				<ul className="flex gap-6">
 					<NavItem text={"Home"} link={"hero"} />
 					<NavItem text={"About Me"} link={"main-section"} />
-					<NavItem text={"Projects"} link={"contact"} />
+					<NavItem text={"Projects"} link={"featured"} />
 					<NavItem text={"Contact"} link={"contact"} />
 				</ul>
 			</nav>
