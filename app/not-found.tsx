@@ -11,7 +11,7 @@ export default function NotFound() {
 				</h2>
 				<p className="text-font-secondary mx-auto mb-8 max-w-md text-center">
 					Oops! The page you&apos;re looking for seems to have wandered off into the digital void.
-					Let's get you back on track.
+					Let&apos;s get you back on track.
 				</p>
 
 				<div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
