@@ -12,13 +12,15 @@ import { LinkCard } from "@/components/UI/LinkCard/LinkCard";
 
 export default async function ProjectPage({ params }: { params: { id: string } }) {
 	const { id } = await params;
-	const { data }: { data: Project } = await getProject(id);
+	const data = await getProject(id);
 
 	const links: { link: string | undefined; type: "front" | "back" | "live" }[] = [
 		{ link: data.frontendUrl, type: "front" },
 		{ link: data.backendUrl, type: "back" },
 		{ link: data.liveUrl, type: "live" },
 	];
+
+	console.log(data);
 
 	return (
 		<div className="bg-background-primary min-h-screen">

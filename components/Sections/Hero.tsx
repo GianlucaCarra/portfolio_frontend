@@ -10,7 +10,7 @@ export function Hero() {
 			id="hero"
 		>
 			<div className="flex flex-col items-center gap-4 lg:w-[50%] lg:items-start lg:gap-6">
-				<SectionTitle noLine text="Hello there 👋!" />
+				<SectionTitle text="Hello there 👋!" />
 
 				<span className="max-w-[90%] text-center text-sm lg:w-[60%] lg:text-left lg:text-base">
 					I’m a developer turning great ideas into solutions.
