@@ -14,7 +14,7 @@ export default [
 
   {
     files: ["**/*.{ts,tsx,js,jsx}"],
-    globalIgnores: [
+    ignores: [
       "node_modules/**",
       ".next/**",
       "out/**",

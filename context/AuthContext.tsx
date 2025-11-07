@@ -11,10 +11,10 @@ interface AuthContextType {
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 export function AuthProvider({ children }: { children: ReactNode }) {
-	const [user, setUser] = useState(null);
+	const [user, setUser] = useState<string | null>(null);
 
 	const login = async (email: string, secret: string) => {
-		const { data } = await authService.login(email, secret);
+		const data = await authService.login(email, secret);
 
 		setUser(data);
 	};
